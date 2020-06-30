@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+ 
+use App\Folder; // ★ この行を追記！
 use Illuminate\Http\Request;
 use App\Http\Requests\CreateFolder;
 
