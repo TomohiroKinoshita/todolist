@@ -35,6 +35,13 @@ return [
 
     'connections' => [
 
+        'sqlite_testing' =>[
+            'driver' => 'sqlite',
+            'database' => ':memory',
+            'prefix' => '',
+        ],
+
+
         'sqlite' => [
             'driver' => 'sqlite',
             'url' => env('DATABASE_URL'),
@@ -42,8 +49,6 @@ return [
             'prefix' => '',
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
-
-        
 
         'mysql' => [
             'driver' => 'mysql',
@@ -63,13 +68,6 @@ return [
             'options' => extension_loaded('pdo_mysql') ? array_filter([
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],
-        ],
-        
-        // ★ この設定を追加
-        'mysql_testing' => [
-            'driver' => 'mysql',
-            'database' => ':memory:',
-            'prefix' => '',
         ],
 
         'pgsql' => [
