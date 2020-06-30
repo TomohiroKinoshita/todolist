@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Folder;
-use App\Task; // ★ 追加え
+use App\Task; // ★ 追加
 use Illuminate\Http\Request;
 
 class TaskController extends Controller
