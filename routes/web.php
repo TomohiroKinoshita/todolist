@@ -26,3 +26,4 @@ Route::post('/folders/{id}/tasks/{task_id}/edit', 'TaskController@edit');
 
 Route::get('/', 'HomeController@index')->name('home');
 
+Auth::routes();
