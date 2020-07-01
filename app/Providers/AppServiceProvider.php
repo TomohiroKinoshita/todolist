@@ -9,7 +9,7 @@ class AppServiceProvider extends ServiceProvider
 {
     /**
      * Register any application services.
-     *
+     *it push heroku master
      * @return void
      */
     public function register()
@@ -24,10 +24,9 @@ class AppServiceProvider extends ServiceProvider
      */
     
 
-public function boot()
-{
-    Schema::defaultStringLength(191);
-}
-}
+    public function boot()
+    {
+        Schema::defaultStringLength(191);
+    }
     
 
