@@ -6,8 +6,11 @@ use App\Folder;
 use App\Http\Requests\CreateTask;
 use App\Http\Requests\EditTask;
 use App\Task;
+
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+
 
 class TaskController extends Controller
 {
@@ -19,7 +22,7 @@ class TaskController extends Controller
     public function index(Folder $folder)
     {
         // ユーザーのフォルダを取得する
-        $folders = Auth::user()->folders()->get();
+        $folders = Auth::user()->folder()->get();
 
         // 選ばれたフォルダに紐づくタスクを取得する
         $tasks = $folder->tasks()->get();
