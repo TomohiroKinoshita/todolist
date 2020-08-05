@@ -22,7 +22,7 @@ class TaskController extends Controller
     public function index(Folder $folder)
     {
         // ユーザーのフォルダを取得する
-        $folders = Auth::user()->folder()->get();
+        $folders = Auth::user()->folders()->get();
 
         // 選ばれたフォルダに紐づくタスクを取得する
         $tasks = $folder->tasks()->get();
